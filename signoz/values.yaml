@@ -157,7 +157,11 @@ clickhouse:
   # -- Node selector for settings for clickhouse pod
   nodeSelector: {}
   # -- Toleration labels for clickhouse pod assignment
-  tolerations: []
+  tolerations:
+    - key: "cknode"
+      operator: "Equal"
+      value: "signoz1"
+      effect: "NoSchedule"
   # -- Affinity settings for clickhouse pod
   affinity: {}
 
@@ -766,7 +770,11 @@ queryService:
   # -- Node selector for settings for QueryService pod
   nodeSelector: {}
   # -- Toleration labels for QueryService pod assignment
-  tolerations: []
+  tolerations:
+    - key: "cknode"
+      operator: "Equal"
+      value: "signoz1"
+      effect: "NoSchedule"
   # -- Affinity settings for QueryService pod
   affinity: {}
   # -- TopologySpreadConstraints describes how QueryService pods ought to spread
@@ -952,7 +960,11 @@ frontend:
   # -- Node selector for settings for Frontend pod
   nodeSelector: {}
   # -- Toleration labels for Frontend pod assignment
-  tolerations: []
+  tolerations:
+    - key: "cknode"
+      operator: "Equal"
+      value: "signoz1"
+      effect: "NoSchedule"
   # -- Affinity settings for Frontend pod
   affinity: {}
   # -- TopologySpreadConstraints describes how Frontend pods ought to spread
@@ -1100,7 +1112,11 @@ alertmanager:
   # -- Node selector for settings for Alertmanager pod
   nodeSelector: {}
   # -- Toleration labels for Alertmanager pod assignment
-  tolerations: []
+  tolerations:
+    - key: "cknode"
+      operator: "Equal"
+      value: "signoz1"
+      effect: "NoSchedule"
   # -- Affinity settings for Alertmanager pod
   affinity: {}
   # -- TopologySpreadConstraints describes how Alertmanager pods ought to spread
@@ -1249,7 +1265,11 @@ schemaMigrator:
   # -- Node selector for settings for schemaMigrator
   nodeSelector: {}
   # -- Toleration labels for schemaMigrator assignment
-  tolerations: []
+  tolerations:
+    - key: "cknode"
+      operator: "Equal"
+      value: "signoz1"
+      effect: "NoSchedule"
   # -- Affinity settings for schemaMigrator
   affinity: {}
 
@@ -1676,7 +1696,11 @@ otelCollector:
   # -- Node selector for settings for OtelCollector pod
   nodeSelector: {}
   # -- Toleration labels for OtelCollector pod assignment
-  tolerations: []
+  tolerations:
+    - key: "cknode"
+      operator: "Equal"
+      value: "signoz1"
+      effect: "NoSchedule"
   # -- Affinity settings for OtelCollector pod
   affinity: {}
   # -- TopologySpreadConstraints describes how OtelCollector pods ought to spread
@@ -2174,7 +2198,11 @@ otelCollectorMetrics:
   # -- Node selector for settings for OtelCollectorMetrics pod
   nodeSelector: {}
   # -- Toleration labels for OtelCollectorMetrics pod assignment
-  tolerations: []
+  tolerations:
+    - key: "cknode"
+      operator: "Equal"
+      value: "signoz1"
+      effect: "NoSchedule"
   # -- Affinity settings for OtelCollectorMetrics pod
   affinity: {}
   # -- TopologySpreadConstraints describes how OtelCollectorMetrics pods ought to spread
