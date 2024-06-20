@@ -61,7 +61,7 @@ clickhouse:
     # Zookeeper image
     image:
       # -- Zookeeper image registry to use.
-      registry: harbor.empoworx.net
+      registry: harbor.bubua12.com
       # -- Zookeeper image repository to use.
       repository: bitnami/zookeeper
       # -- Zookeeper image tag.
@@ -105,7 +105,7 @@ clickhouse:
   # -- Clickhouse image
   image:
     # -- Clickhouse image registry to use.
-    registry: harbor.empoworx.net
+    registry: harbor.bubua12.com
     # -- Clickhouse image repository to use.
     repository: clickhouse/clickhouse-server
     # -- Clickhouse image tag to use (example: `21.8`).
@@ -245,7 +245,7 @@ clickhouse:
     udf:
       enabled: true
       image:
-        registry: harbor.empoworx.net
+        registry: harbor.bubua12.com
         repository: signoz/alpine
         tag: 3.18.2
         pullPolicy: IfNotPresent
@@ -391,7 +391,7 @@ clickhouse:
     # -- Clickhouse Operator image
     image:
       # -- Clickhouse Operator image registry to use.
-      registry: harbor.empoworx.net
+      registry: harbor.bubua12.com
       # -- Clickhouse Operator image repository to use.
       repository: altinity/clickhouse-operator
       # -- Clickhouse Operator image tag.
@@ -526,7 +526,7 @@ clickhouse:
       # -- Metrics Exporter image
       image:
         # -- Metrics Exporter image registry to use.
-        registry: harbor.empoworx.net
+        registry: harbor.bubua12.com
         # -- Metrics Exporter image repository to use.
         repository: altinity/metrics-exporter
         # -- Metrics Exporter image tag.
@@ -571,7 +571,7 @@ queryService:
   name: "query-service"
   replicaCount: 1
   image:
-    registry: harbor.empoworx.net
+    registry: harbor.bubua12.com
     repository: signoz/query-service
     tag: 0.44.0
     pullPolicy: IfNotPresent
@@ -801,7 +801,7 @@ frontend:
   replicaCount: 1
 
   image:
-    registry: harbor.empoworx.net
+    registry: harbor.bubua12.com
     repository: signoz/frontend
     tag: 0.44.0
     pullPolicy: IfNotPresent
@@ -965,7 +965,7 @@ alertmanager:
   replicaCount: 1
 
   image:
-    registry: harbor.empoworx.net
+    registry: harbor.bubua12.com
     repository: signoz/alertmanager
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
@@ -1233,7 +1233,7 @@ schemaMigrator:
   name: "schema-migrator"
 
   image:
-    registry: harbor.empoworx.net
+    registry: harbor.bubua12.com
     repository: signoz/signoz-schema-migrator
     tag: 0.88.21
     pullPolicy: IfNotPresent
@@ -1282,7 +1282,7 @@ schemaMigrator:
     chReady:
       enabled: true
       image:
-        registry: harbor.empoworx.net
+        registry: harbor.bubua12.com
         repository: clickhouse/clickhouse-server
         tag: 24.1.2-alpine
         pullPolicy: IfNotPresent
@@ -1347,7 +1347,7 @@ schemaMigrator:
 otelCollector:
   name: "otel-collector"
   image:
-    registry: harbor.empoworx.net
+    registry: harbor.bubua12.com
     repository: signoz/signoz-otel-collector
     tag: 0.88.21
     pullPolicy: IfNotPresent
@@ -1972,7 +1972,7 @@ otelCollectorMetrics:
   enabled: true
   name: "otel-collector-metrics"
   image:
-    registry: harbor.empoworx.net
+    registry: harbor.bubua12.com
     repository: signoz/signoz-otel-collector
     tag: 0.88.21
     pullPolicy: IfNotPresent
@@ -2652,7 +2652,7 @@ k8s-infra:
   otelAgent:
     name: "otel-agent"
     image:
-      registry: harbor.empoworx.net
+      registry: harbor.bubua12.com
       repository: otel/opentelemetry-collector-contrib
       tag: 0.88.0
       pullPolicy: IfNotPresent
@@ -2760,7 +2760,7 @@ k8s-infra:
   otelDeployment:
     name: "otel-deployment"
     image:
-      registry: harbor.empoworx.net
+      registry: harbor.bubua12.com
       repository: otel/opentelemetry-collector-contrib
       tag: 0.88.0
       pullPolicy: IfNotPresent
